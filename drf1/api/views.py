@@ -25,7 +25,7 @@ def student_detail(request, pk):
     # json_data = JSONRenderer().render(serializer.data)
     # print(json_data)
     # return HttpResponse(json_data, content_type = 'application/json')
-    return JsonResponse(serializer.data, safe=True)
+    return JsonResponse(serializer.data, safe=True) #safe=False when lot of data like objects.all()
 
 #entire query set//all data
 def student_list(request):
